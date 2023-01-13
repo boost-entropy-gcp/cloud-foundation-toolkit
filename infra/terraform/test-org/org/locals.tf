@@ -491,6 +491,20 @@ locals {
       description = "Manage Cloud Workflows with optional Scheduler or Event Arc triggers."
       owners      = "@anaik91"
       topics      = join(",", [local.common_topics.serverless, local.common_topics.devtools])
-    }
+    },
+    {
+      name        = "terraform-google-cloud-armor"
+      org         = "GoogleCloudPlatform"
+      description = "Deploy Cloud Armor Security policy"
+      owners      = "@imrannayer @belgana"
+      topics      = join(",", [local.common_topics.compute, local.common_topics.net])
+    },
+    {
+      name        = "terraform-google-cloud-deploy"
+      org         = "GoogleCloudPlatform"
+      description = "Create Cloud Deploy pipelines and targets"
+      owners      = "@gtsorbo @niranjankl"
+      topics      = join(",", [local.common_topics.devtools])
+    },
   ]
 }
