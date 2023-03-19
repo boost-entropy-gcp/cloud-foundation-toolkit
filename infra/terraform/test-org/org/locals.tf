@@ -161,6 +161,7 @@ locals {
       name        = "terraform-google-network-forensics"
       org         = "GoogleCloudPlatform"
       description = "Deploys Zeek on Google Cloud"
+      owners      = "@gtsorbo"
       topics      = local.common_topics.net
     },
     {
@@ -535,6 +536,19 @@ locals {
       description = "Includes use cases for deploying ITAR-aligned architectures on Google Cloud"
       owners      = "@gtsorbo"
       topics      = join(",", [local.common_topics.compute], ["compliance"])
+    },
+    {
+      name        = "Migrate-Legacy-Java-App-GKE"
+      org         = "HSA-Integration"
+      description = "TODO"
+      owners      = "@donmccasland"
+    },
+    {
+      name        = "terraform-google-analytics-lakehouse"
+      org         = "GoogleCloudPlatform"
+      description = "Deploys a Lakehouse Architecture Solution"
+      owners      = "@stevewalker-de"
+      topics      = local.common_topics.da
     },
   ]
 }
