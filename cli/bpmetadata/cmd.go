@@ -263,6 +263,16 @@ func (i *BlueprintInfo) create(bpPath string, readmeContent []byte) error {
 		i.Icon = iconFilePath
 	}
 
+	d, err := getDeploymentDuration(readmeContent, "Deployment Duration")
+	if err == nil {
+		i.DeploymentDuration = *d
+	}
+
+	c, err := getCostEstimate(readmeContent, "Cost")
+	if err == nil {
+		i.CostEstimate = *c
+	}
+
 	return nil
 }
 
@@ -292,6 +302,12 @@ func (c *BlueprintContent) create(bpPath string, rootPath string, readmeContent 
 		}
 
 		c.Documentation = docListToSet
+	}
+
+	// create architecture
+	a, err := getArchitctureInfo(readmeContent, "Architecture")
+	if err == nil {
+		c.Architecture = *a
 	}
 
 	// create sub-blueprints
