@@ -84,7 +84,7 @@ locals {
       name        = "terraform-google-cloud-run"
       org         = "GoogleCloudPlatform"
       description = "Deploys apps to Cloud Run, along with option to map custom domain"
-      owners      = ["prabhu34", "anamer", "mitchelljamie"]
+      owners      = ["prabhu34", "anamer", "gtsorbo"]
       topics      = "cloudrun,google-cloud-platform,terraform-modules,${local.common_topics.serverless}"
     },
     {
@@ -524,7 +524,7 @@ locals {
       name        = "terraform-google-cloud-functions"
       org         = "GoogleCloudPlatform"
       description = "Deploys Cloud Functions (Gen 2)"
-      owners      = ["prabhu34"]
+      owners      = ["prabhu34", "gtsorbo"]
       topics      = "cloudfunctions,functions,google-cloud-platform,terraform-modules,${local.common_topics.serverless}"
     },
     {
@@ -582,6 +582,13 @@ locals {
       org         = "GoogleCloudPlatform"
       description = "Deploy a Legacy Java App GKE"
       owners      = ["donmccasland"]
+    },
+    {
+      name        = "terraform-google-crmint"
+      org         = "GoogleCloudPlatform"
+      description = "Deploy the Marketing Analytics application CRMint"
+      owners      = ["dulacp"]
+      topics      = join(",", [local.common_topics.da, local.common_topics.e2e], ["marketing"])
     },
   ]
 }
