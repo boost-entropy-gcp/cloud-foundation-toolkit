@@ -113,7 +113,14 @@ locals {
       short_name  = "ecommerce-microservices"
       org         = "GoogleCloudPlatform"
       description = "Deploys a web-based ecommerce app into a multi-cluster Google Kubernetes Engine setup."
-      owners      = ["NimJay"]
+      owners      = ["arbrown", "bourgeoisor", "donmccasland", "minherz", "NimJay", "Shabirmean"]
+    },
+    {
+      name        = "terraform-example-java-dynamic-point-of-sale"
+      short_name  = "java-dynamic-point-of-sale"
+      org         = "GoogleCloudPlatform"
+      description = "Deploys a dynamic Java webapp into a Google Kubernetes Engine cluster."
+      owners      = ["shabirmean", "Mukamik"]
     },
     {
       name         = "terraform-example-foundation"
