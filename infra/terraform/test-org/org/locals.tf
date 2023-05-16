@@ -36,7 +36,7 @@ locals {
       gh_org      = repo.org
     }
   }
-  jss_common_group = "jump-start-solution-owners"
+  jss_common_group = "jump-start-solutions-admins"
 
   common_topics = {
     hcls       = "healthcare-life-sciences",
@@ -561,7 +561,7 @@ locals {
       description  = "Deploy a dynamic python webapp"
       owners       = ["glasnt", "donmccasland"]
       homepage_url = "avocano.dev"
-      groups       = [local.jss_common_group]
+      groups       = [local.jss_common_group, "torus-dpe"]
     },
     {
       name        = "terraform-example-deploy-java-multizone"
