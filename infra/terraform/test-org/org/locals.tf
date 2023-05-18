@@ -128,7 +128,7 @@ locals {
       owners      = ["shabirmean", "Mukamik"]
       groups      = ["dee-platform-ops", local.jss_common_group]
       lint_env = {
-        "EXCLUDE_HEADER_CHECK" = "\\./infra/modules/spanner/sql-schema"
+        "EXCLUDE_HEADER_CHECK" = "\\./infra/sql-schema"
       }
     },
     {
@@ -154,12 +154,13 @@ locals {
       groups      = [local.jss_common_group]
     },
     {
-      name        = "terraform-google-three-tier-web-app"
-      org         = "GoogleCloudPlatform"
-      description = "Deploys a three tier web application using Cloud Run and Cloud SQL"
-      owners      = ["tpryan"]
-      topics      = join(",", [local.common_topics.serverless, local.common_topics.db])
-      groups      = [local.jss_common_group]
+      name            = "terraform-google-three-tier-web-app"
+      org             = "GoogleCloudPlatform"
+      description     = "Deploys a three tier web application using Cloud Run and Cloud SQL"
+      owners          = ["tpryan"]
+      topics          = join(",", [local.common_topics.serverless, local.common_topics.db])
+      groups          = [local.jss_common_group]
+      enable_periodic = true
     },
     {
       name        = "terraform-google-load-balanced-vms"
@@ -634,6 +635,14 @@ locals {
       org         = "GoogleCloudPlatform"
       description = "Deploys a large data sharing Golang web app"
       groups      = ["torus-dpe", "dee-platform-ops", "dee-data-ai", local.jss_common_group]
+    },
+    {
+      name        = "terraform-ml-image-annotation-gcf"
+      short_name  = "ml-image-annotation-gcf"
+      org         = "GoogleCloudPlatform"
+      description = "Deploys an app for ml image annotation using gcf"
+      owners      = ["xsxm", "ivanmkc", "balajismaniam", "donmccasland"]
+      groups      = ["dee-data-ai", local.jss_common_group]
     },
   ]
 }
