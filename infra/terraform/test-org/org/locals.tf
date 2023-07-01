@@ -98,6 +98,9 @@ locals {
       description = "Deploys a secured BigQuery data warehouse"
       owners      = ["erlanderlo"]
       topics      = join(",", [local.common_topics.da, local.common_topics.e2e])
+      lint_env = {
+        SHELLCHECK_OPTS = "-e SC2154 -e SC2171 -e SC2086"
+      }
     },
     {
       name        = "terraform-google-anthos-vm"
@@ -710,6 +713,15 @@ locals {
       description = "Creates a 3P out-of-band security appliance deployment"
       owners      = ["Saipriyavk", "ChrisBarefoot"]
       topics      = local.common_topics.net
+    },
+    {
+      name            = "terraform-genai-doc-summarization"
+      short_name      = "genai-doc-summarization"
+      org             = "GoogleCloudPlatform"
+      description     = "Summarizes document using OCR and Vertex Generative AI LLM"
+      owners          = ["asrivas", "balajismaniam", "telpirion", "yil532", "nicain"]
+      groups          = ["dee-data-ai", local.jss_common_group]
+      enable_periodic = true
     },
   ]
 }
