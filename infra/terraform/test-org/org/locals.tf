@@ -835,11 +835,12 @@ locals {
       topics      = local.common_topics.da
     },
     {
-      name        = "terraform-google-enterprise-application"
-      org         = "GoogleCloudPlatform"
-      description = "Deploy an enterprise developer platform on Google Cloud"
-      owners      = ["gtsorbo"]
-      topics      = join(",", [local.common_topics.e2e, local.common_topics.ops])
+      name            = "terraform-google-enterprise-application"
+      org             = "GoogleCloudPlatform"
+      description     = "Deploy an enterprise developer platform on Google Cloud"
+      owners          = ["gtsorbo"]
+      topics          = join(",", [local.common_topics.e2e, local.common_topics.ops])
+      enable_periodic = true
     },
     {
       name            = "terraform-genai-rag"
@@ -893,6 +894,7 @@ locals {
       short_name  = "dataanalytics-eventdriven"
       org         = "GoogleCloudPlatform"
       description = "Uses click-to-deploy to demonstrate how to load data from Cloud Storage to BigQuery using an event-driven load function."
+      groups      = [local.jss_common_group]
       owners      = ["fellipeamedeiros", "sylvioneto"]
     },
   ]
