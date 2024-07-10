@@ -642,7 +642,7 @@ locals {
       description     = "Deploy a multizone Java application"
       owners          = ["donmccasland"]
       groups          = [local.jss_common_group]
-      enable_periodic = true
+      enable_periodic = false
       lint_env = {
         ENABLE_BPMETADATA = "1"
       }
@@ -848,6 +848,13 @@ locals {
       description = "Create and manage Artifact Registry repositories"
       owners      = ["prabhu34"]
       topics      = join(",", [local.common_topics.containers, local.common_topics.devtools])
+    },
+    {
+      name        = "terraform-google-bigtable"
+      org         = "GoogleCloudPlatform"
+      description = "Create and manage Google Bigtable resources"
+      owners      = ["hariprabhaam"]
+      topics      = local.common_topics.da
     },
     {
       name        = "terraform-google-secure-web-proxy"
