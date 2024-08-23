@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.4](https://github.com/GoogleCloudPlatform/cloud-foundation-toolkit/compare/tflint-ruleset-blueprint/v0.2.3...tflint-ruleset-blueprint/v0.2.4) (2024-08-15)
+
+
+### Bug Fixes
+
+* **terraform_required_version_range:** terraform block ([#2529](https://github.com/GoogleCloudPlatform/cloud-foundation-toolkit/issues/2529)) ([f5dce52](https://github.com/GoogleCloudPlatform/cloud-foundation-toolkit/commit/f5dce52092c3c41662c7722db99d80c0e4a9d74d))
+
+## [0.2.3](https://github.com/GoogleCloudPlatform/cloud-foundation-toolkit/compare/tflint-ruleset-blueprint/v0.2.2...tflint-ruleset-blueprint/v0.2.3) (2024-08-14)
+
+
+### Bug Fixes
+
+* **terraform_required_version_range:** skip missing ([#2522](https://github.com/GoogleCloudPlatform/cloud-foundation-toolkit/issues/2522)) ([23fc89f](https://github.com/GoogleCloudPlatform/cloud-foundation-toolkit/commit/23fc89f97b968b97c2a9da8235ed62b45e181d6c))
+
 ## [0.2.2](https://github.com/GoogleCloudPlatform/cloud-foundation-toolkit/compare/tflint-ruleset-blueprint/v0.2.1...tflint-ruleset-blueprint/v0.2.2) (2024-08-14)
 
 
